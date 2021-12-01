@@ -12,10 +12,16 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     conn, addr = s.accept()
     with conn:
         print('Connected by', addr)
-        key = conn.recv(294) #public key is length 294
-        key = RSA.importKey(key)
-        print("have key")
-        print(key.exportKey('PEM'))
+        bob_key = conn.recv(294) #public key is length 294
+        bob_key = RSA.importKey(bob_key)
+        print("have Bob's key")
+        print(bob_key.exportKey('PEM'))
+
+        key = key_gen()
+        pub_key = key.public_key().exportKey('DER')
+        conn.send(pub_key)
+
+        exit()
 
         m = conn.recv(1024)
         m = m.decode()
