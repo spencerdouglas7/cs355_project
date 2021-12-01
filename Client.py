@@ -10,7 +10,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
 
     key = key_gen()
-    pub_key = key.public_key().exportKey('DER')
+    pub_key = key.public_key().exportKey('DER') #Export from key object
     s.sendall(pub_key)
 
     m = "Message"

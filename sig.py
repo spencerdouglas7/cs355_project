@@ -12,12 +12,12 @@ def key_gen():
 def sign(m, key):
   signer = PKCS1_v1_5.new(key)
   hashed_m = SHA_hash(m, False)
-  return signer.sign(hashed_m)
+  return signer.sign(hashed_m) #Return signature
 
 def verify(m, sig, public_key):
   verify_sig = PKCS1_v1_5.new(public_key)
   hashed_m = SHA_hash(m, False)
-  return verify_sig.verify(hashed_m, sig)
+  return verify_sig.verify(hashed_m, sig) #Boolean
 
 def test():
   m = 'Message'
