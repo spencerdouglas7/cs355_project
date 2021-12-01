@@ -14,11 +14,11 @@ def SHA_hash(string, printable):
     else:
       return h
 def SHA_hash_test():
-    print(SHA_hash('Hello'))
-    print(SHA_hash('Hello'))
-    print(SHA_hash(None))
-    print(SHA_hash({}))
-    print(SHA_hash('Zoo Wee Mama'))
+    print(SHA_hash('Hello', True))
+    print(SHA_hash('hello', True))
+    print(SHA_hash(None, True))
+    print(SHA_hash({}, True))
+    print(SHA_hash('Zoo Wee Mama', True))
 
 
 #SHA_hash_test()

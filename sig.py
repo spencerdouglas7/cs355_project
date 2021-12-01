@@ -1,7 +1,6 @@
 import Crypto.PublicKey.RSA as RSA
 from Crypto import Random
 from Crypto.Signature import PKCS1_v1_5
-from Crypto.Hash import SHA256
 from Hash import SHA_hash
 
 def key_gen():
