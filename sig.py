@@ -28,4 +28,4 @@ def test():
   print(verify(m, sig, key.public_key()))
   print(verify(m, sig2, key.public_key()))
 
-test()
+#test()
