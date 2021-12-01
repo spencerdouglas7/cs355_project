@@ -23,6 +23,9 @@ def test():
   m = 'Message'
   key = key_gen()
   sig = sign(m, key)
+  m2 = 'Message2'
+  sig2 = sign(m2, key)
   print(verify(m, sig, key.public_key()))
+  print(verify(m, sig2, key.public_key()))
 
 test()
