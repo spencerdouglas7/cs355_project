@@ -12,7 +12,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     conn, addr = s.accept()
     with conn:
         print('Connected by', addr)
-        key = conn.recv(294) #public key is size 327
+        key = conn.recv(294) #public key is length 294
         key = RSA.importKey(key)
         print("have key")
         print(key.exportKey('PEM'))
