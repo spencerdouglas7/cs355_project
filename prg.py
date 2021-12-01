@@ -10,7 +10,7 @@ def crypto_random():
 
 def crypto_random_test():
     map = {}
-    for i in range(100):
+    for i in range(1000000):
         val = crypto_random()
         if map.get(val):
             return False
