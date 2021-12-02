@@ -5,7 +5,7 @@ from Hash import SHA_hash
 
 def key_gen():
   random_gen = Random.new().read
-  key = RSA.generate(2048, random_gen)
+  key = RSA.generate(4096, random_gen)
   return key
 
 def sign(m, key):

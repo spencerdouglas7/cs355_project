@@ -15,4 +15,4 @@ def crypto_random_test():
         map.update({val: val})
     return True
 
-print(crypto_random_test())
+#print(crypto_random_test())
